@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVELGO-THE BEST SERVICE </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 120px;
+            background-color: #FDFDFD;
+            box-shadow: 0px 9px 6px rgb(3, 3, 3);
+            font-size: 16px;
+            border-bottom: 2px solid #eeeeee;
+        }
+
+        .orange {
+            color: #F16D29;
+        }
+
+        header nav {
+            display: flex;
+            gap: 60px;
+        }
+
+        header nav a {
+            color: #646B70;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header h2 {
+            font-size: 35px;
+        }
+
+        header button {
+            padding: 15px 25px;
+            background-color: #F16D29;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+
+        .hero-section {
+            background-color: #FDF9F5;
+            padding: 40px 60px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .explore {
+            background-color: #FEFCFC;
+            border-bottom: 1px solid #F16D29;
+            box-shadow: 0px 0px 2px 0px #F16D29;
+            border-radius: 25px;
+            padding: 5px 9px;
+            width: fit-content;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .heading {
+            font-size: 70px;
+            text-shadow: 3px 3px 6px #757473;
+            line-height: 0.9;
+        }
+
+        .hero-text {
+            font-size: 22px;
+            margin: 20px 0px;
+            color: #646B70;
+        }
+
+        .explore-btn {
+            padding: 15px 25px;
+            background-color: #F16D29;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bolder;
+            font-size: 23px;
+            box-shadow: 1px 3px 9px 0px #F16D29;
+        }
+
+        .learn-more-btn {
+            padding: 15px 27px;
+            background-color: transparent;
+            color: #000000;
+            border: 2px solid #F16D29;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bolder;
+            font-size: 23px;
+            margin-left: 10px;
+        }
+
+        .hero-right {
+            position: relative;
+            border: 2px solid rgba(241, 109, 41, 0.3);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(241, 109, 41, 0.3);
+        }
+
+        .hero-right img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .hero-right .img-text {
+            position: absolute;
+            color: white;
+            font-weight: bold;
+        }
+
+        .hero-right .title {
+            top: 40px;
+            right: 50px;
+            font-size: 18px;
+            background-color: #F16D29;
+            padding: 10px 15px;
+            border-radius: 13px;
+            box-shadow: 0px 0px 5px 0px #eb7439;
+            text-shadow: 1px 1px 5px #cac8c8;
+        }
+
+        .hero-right .location {
+            bottom: 40px;
+            left: 50px;
+            font-size: 14px;
+            background-color: rgba(27, 29, 28, 0.8);
+            padding: 12px 15px;
+            border-radius: 13px;
+        }
+
+        .hero-right .rating {
+            bottom: 40px;
+            right: 50px;
+            font-size: 23px;
+            background-color: rgba(27, 29, 28, 0.8);
+            padding: 12px 20px;
+            border-radius: 13px;
+            box-shadow: 0px -2px 5px 0px #eb7439;
+        }
+
+        .features-heading {
+            text-align: center;
+            margin: 50px 0px 30px;
+            font-size: 20px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 120px;
+        }
+
+        .feature {
+            background-color: #FDF9F5;
+            padding: 30px 20px;
+            width: 23%;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(241, 109, 41, 0.3);
+            font-size: 18px;
+        }
+
+        .feature p {
+
+            color: #646B70;
+            margin-top: 10px;
+        }
+
+
+
+        /* DESTINATIONS SECTION */
+        .destinations {
+            background-color: #fffaf6;
+            padding: 35px 6%;
+            font-family: Arial, sans-serif;
+            color: #18232c;
+        }
+
+        .destinations>.orange {
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .destinations h2 {
+            font-size: 36px;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px #00000015;
+        }
+
+        .section-intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 18px;
+        }
+
+        .section-intro p {
+            color: #687782;
+            font-size: 15px;
+        }
+
+        .view-all {
+            font-weight: bold;
+            cursor: pointer;    
+        }
+
+        /* CARDS LAYOUT */
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 22px;            
+        }
+
+        .card {
+            background-color: white;
+            padding: 14px;
+            border-radius: 10px;
+            box-shadow: 0 8px 18px #00000012;
+        }
+
+        /* DIFFERENT CARD OUTLINES */
+        .maldives {
+            outline: 2px solid #ffca94;
+        }
+
+        .switzerland {
+            outline: 2px solid #dce5d7;
+        }
+
+        .japan {
+            outline: 2px solid #d6a3ff;
+        }
+
+        /* DESTINATION IMAGES */
+        .destination-image {
+            height: 118px;
+            overflow: hidden;
+            border-radius: 7px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .destination-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: inline-block;
+        }
+
+        /* IMAGE CATEGORY LABELS */
+        .badge {
+            color: white;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-size: 12px;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+
+        .beach {
+            background-color: #ff641f;
+        }
+
+        .mountain {
+            background-color: #168e8b;
+        }
+
+        .city {
+            background-color: #9429bd;
+        }
+
+        /* CARD TEXT */
+        .card h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #17232c;
+        }
+
+        .card p {
+            color: #687782;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .card .location {
+            margin-bottom: 10px;
+        }
+
+        /* LIST STYLING */
+        .card ul {
+            padding-left: 22px;
+            list-style-type: disc;
+        }
+
+        .card li {
+            color: #566673;
+            font-size: 12px;
+            padding: 4px 0;
+        }
+
+        /* SCROLLABLE JAPAN LIST */
+        .japan-list {
+            height: 78px;
+            overflow: auto;
+            border: 1px solid #eeeeee;
+            border-radius: 6px;
+            padding: 3px 0;
+            box-shadow: inset 0 1px 4px #00000008;
+        }
+
+        .japan-list ul {
+            padding-left: 30px;
+        }
+
+        .japan-list li {
+            padding: 4px 0;
+        }
+
+
+        /* FOOTER */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 25px 7%;
+            background-color: #242424;
+            color: #ffffff;
+            box-shadow: 0 -4px 15px #00000015;
+        }
+
+        footer h3 {
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        footer nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        footer nav a {
+            color: #d6d6d6;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        footer p {
+            color: #bdbdbd;
+            font-size: 12px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header of the page -->
+    <header>
+        <h2>TRAVEL<span class="orange">GO</span></h2>
+
+        <nav>
+            <a href="#home" style="color:#F16D29; text-decoration: underline #F16D29 ;">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button>Plan Your Trip →</button>
+    </header>
+
+    <!-- main section of the page -->
+
+    <main>
+        <!-- hero section of main -->
+        <section class="hero-section">
+            <div>
+                <div class="orange explore">
+                    Explore • Discover • Travel
+                </div>
+
+
+                <h1 class="heading">Make Your Next Trip</h1>
+                <h1 class="orange heading">Unforgettable</h1>
+
+
+                <p class="hero-text">
+                    Discover amazing destinations, experience new cultures,<br>
+                    and create memories that last a lifetime.
+                </p>
+
+                <div>
+                    <button class="explore-btn">Explore Destinations →</button>
+                    <button class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+
+            <div class="hero-right">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZU6BtAfRcsE2leUGz_S9dIshAtvMWLBNO8vXTdF5dzRSoE8FG1CahT7w&s=10"
+                    alt="Lake Louise Image">
+
+                <div class="img-text title">Featured Destination</div>
+
+                <div class="img-text location"><span style="font-size: 18px;">📍 Lake Louise, Canada</span><br>
+                    Nature's own paradise</div>
+
+                <div class="img-text rating">★ 4.8</div>
+            </div>
+
+        </section>
+
+
+        <!-- features section of main -->
+
+        <section class="features-section">
+            <div class="features-heading">
+                <p class="orange">WHY CHOOSE US</p>
+                <h2>Our Travel Features</h2>
+                <p style="color: #646B70;">Everything you need for a smooth and memorable journey.</p>
+            </div>
+
+            <div class="features">
+
+                <div class="feature">
+                    <h3>Easy Booking</h3>
+                    <p>Quick and hassle-free bookings in just a few clicks.</p>
+                </div>
+                <div class="feature">
+                    <h3>Safe & Secure</h3>
+                    <p>Your safety and data are always our priority.</p>
+                </div>
+                <div class="feature">
+                    <h3>Expert Guides</h3>
+                    <p>Explore with experienced and friendly guides.</p>
+                </div>
+                <div class="feature">
+                    <h3>24/7 Support</h3>
+                    <p>We're always here to help, anytime.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Card section of main -->
+        <section class="destinations" id="destinations">
+
+            <p class="orange">POPULAR PLACES</p>
+            <h2>Top Destinations</h2>
+
+            <div class="section-intro">
+                <p>Explore some of the most loved places around the world.</p>
+                <span class="orange view-all">View All →</span>
+            </div>
+
+            <div class="cards">
+
+                <div class="card maldives">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80"
+                            alt="Maldives beach">
+                        <span class="badge beach">Beach</span>
+                    </div>
+
+                    <h4>Maldives</h4>
+                    <p class="location">📍 Indian Ocean</p>
+
+                    <p>Crystal clear water, white sandy beaches,
+                        and a peaceful atmosphere.</p>
+
+                    <ul>
+                        <li>Snorkeling &amp; Diving</li>
+                        <li>Water Villas</li>
+                        <li>Sunset Views</li>
+                    </ul>
+                </div>
+
+                <div class="card switzerland">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=600&q=80"
+                            alt="Swiss mountains">
+                        <span class="badge mountain">Mountain</span>
+                    </div>
+
+                    <h4>Switzerland</h4>
+                    <p class="location">📍 Europe</p>
+
+                    <p>Breathtaking mountains, charming villages,
+                        and fresh air.</p>
+
+                    <ul>
+                        <li>Hiking Trails</li>
+                        <li>Scenic Train Rides</li>
+                        <li>Alpine Villages</li>
+                    </ul>
+                </div>
+
+                <div class="card japan">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80"
+                            alt="Traditional Japanese architecture">
+                        <span class="badge city">City</span>
+                    </div>
+
+                    <h4>Japan</h4>
+                    <p class="location">📍 Asia</p>
+
+                    <p>A perfect blend of tradition and modernity
+                        in every corner.</p>
+
+                    <div class="japan-list">
+                        <ul>
+                            <li>Tokyo Skytree</li>
+                            <li>Historic Temples</li>
+                            <li>Cherry Blossom Season</li>
+                            <li>Amazing Food</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer of the page -->
+
+    <footer>
+        <h3>TRAVEL<span class="orange">GO</span></h3>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <p>© 2026 TravelGo. All rights reserved.</p>
+
+    </footer>
+
+
+</body>
+
+</html>
